@@ -43,7 +43,8 @@ function styles() {
     .pipe(scss({ outputStyle: 'compressed'}))
     .pipe(autoprefixer({ 
         overrideBrowserslist: ['last 10 version'],
-        grid: true
+        add: true,
+        grid: false
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream()); 
