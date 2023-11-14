@@ -10,10 +10,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
-}
-
-.menu{
+  }
+  
+  .menu{
     &__list{
         display: flex;
     }
@@ -36,9 +37,9 @@
         color: $accent;
         @extend %roboto-700;
     }
-}
-
-.user-nav{
+  }
+  
+  .user-nav{
     display: flex;
     &__link{
         position: relative;
@@ -59,13 +60,13 @@
         text-align: center;
         color: #fff;
     }
-}
+  }
 
-footer{
+  footer{
     background-color: $bg;
-}
-
-.footer-top{
+  }
+  
+  .footer-top{
     padding: 70px 0 40px;
     border-bottom: 1px solid #ececec;
     display: flex;
@@ -116,6 +117,9 @@ footer{
         font-size: 22px;
         line-height: 1;
     }
+    &__form{
+        display: flex;
+    }
     &__link{
         margin-bottom: 14px;
         display: block;
@@ -127,6 +131,7 @@ footer{
         background-color: #fff;
         max-width: 320px;
         width: 100%;
+        margin-right: 3px;
         border: none;
         padding: 12px 10px 12px 15px;
         box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
@@ -140,19 +145,20 @@ footer{
         border: none;
         cursor: pointer;
     }
-}
-.footer-bottom{
-    height: 75px;
+  }
+  .footer-bottom{
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 12px;
     &__accept-img{
         display: inline;
         margin-left: 25px;
         vertical-align: middle;
     }
-}
+  }
 
 .top{
     &__container{
@@ -409,6 +415,7 @@ footer{
         border: 1px solid $accent;
         padding: 14px 27px;
         margin-top: 55px;
+        cursor: pointer;
     }
 }
 
@@ -659,7 +666,7 @@ footer{
         &::after{
             content:'';
             position: absolute;
-            right: -20px;
+            right: 0;
             top: -25px;
             width: 126px;
             height: 53px;
@@ -812,6 +819,7 @@ footer{
         margin-bottom: 40px;
         @extend %roboto-700;
         font-size: 48px;
+        line-height: 52px;
     }
     &__text{
         margin-bottom: 55px;
@@ -828,13 +836,16 @@ footer{
 }
   
 .shop{
-    padding: 120px 105px;
+    padding: 120px 10px;
     &__inner{
         display: flex;
     }
     &__filters{
         width: 370px;
         margin-right: 30px;
+    }
+    &__filter-btn{
+        display: none;
     }
 }
 
@@ -1044,12 +1055,14 @@ footer{
 .shop-content{
     width: 100%;
     &__inner{
+        // width: 1200px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         border-bottom: 1px solid #ececec;
         .product-item{
             margin-bottom: 40px;
+            width: 370px;
         }
     }
     &__filter{
@@ -1705,6 +1718,7 @@ footer{
         border-top: none;
         padding: 30px;
         margin-top: -1px;
+        overflow: auto;
         h4{
             color: $title;
             font-size: 22px;
@@ -1828,13 +1842,6 @@ footer{
     @extend %roboto-700;
     text-transform: uppercase;
 }
-
-#map{
-    display: block;
-    text-align: center;
-    width: 870px;
-}
-
 .contact{
     padding: 120px 0;
     &__inner{
@@ -1876,6 +1883,7 @@ footer{
             background-image: url('../images/icons/phone.svg');
             left: 20px;
             top: 18px;
+            right: 0;
         }
     }
     &__info-item--location::after{
@@ -1934,6 +1942,7 @@ footer{
         border: none;
     }
 }
+
 
 
 @import 'media';
